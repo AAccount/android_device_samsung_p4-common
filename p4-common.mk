@@ -105,7 +105,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/bcmdhd_sta.bin:system/etc/wifi/bcmdhd_sta.bin
 
 #Prebuilt chromium
-# COPY IN SYMBOLIC LINK FOR CHROMIUM APP
+#COPY IN LIB/ARM SYMLINK
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/chromium/webview/webview.apk:system/app/webview/webview.apk \
 	$(LOCAL_PATH)/chromium/libwebviewchromium.so:/system/lib/libwebviewchromium.so \
