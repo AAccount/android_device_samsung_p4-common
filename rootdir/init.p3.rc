@@ -414,13 +414,3 @@ service superuser /system/xbin/su --daemon
 	class main
 	user root
 
-service battery_charger /charger
-    class charger
-
-service frandom /system/xbin/sh /system/etc/init.d/00random
-	user root
-	oneshot
-
-service userinit /system/xbin/sh /system/etc/init.d/90userinit
-	user root
-	oneshot
