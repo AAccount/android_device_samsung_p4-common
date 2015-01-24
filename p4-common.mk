@@ -74,8 +74,7 @@ PRODUCT_PROPERTY_OVERRIDES := \
     ro.sf.lcd_density=160 \
     dalvik.vm.dexopt-data-only=1 \
     debug.hwui.render_dirty_regions=false \
-	ro.zygote.disable_gl_preload=true \
-	ro.bq.gpu_to_cpu_unsupported=1
+	ro.zygote.disable_gl_preload=true
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mtp
@@ -87,6 +86,8 @@ PRODUCT_PACKAGES := \
 	libwpa_client \
 	hostapd \
 	wpa_supplicant \
+	wpa_supplicant.conf \
+	dhcpcd.conf \
 	su
 
 PRODUCT_COPY_FILES += \
@@ -100,7 +101,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/bcmdhd_mfg.bin:system/etc/wifi/bcmdhd_mfg.bin \
     $(LOCAL_PATH)/wifi/bcmdhd_apsta.bin:system/etc/wifi/bcmdhd_apsta.bin \
     $(LOCAL_PATH)/wifi/bcmdhd_p2p.bin:system/etc/wifi/bcmdhd_p2p.bin \
-    $(LOCAL_PATH)/wifi/bcmdhd_sta.bin:system/etc/wifi/bcmdhd_sta.bin
+    $(LOCAL_PATH)/wifi/bcmdhd_sta.bin:system/etc/wifi/bcmdhd_sta.bin \
+    $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf \
+    $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:system/etc/wifi/p2p_supplicant_overlay.conf \
+    $(LOCAL_PATH)/wifi/hostapd_default.conf:system/etc/hostapd/hostapd_default.conf
 
 #Prebuilt chromium
 #COPY IN LIB/ARM SYMLINK
@@ -131,8 +135,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_COPY_FILES += \
         $(LOCAL_PATH)/audio/asound.conf:system/etc/asound.conf \
         $(LOCAL_PATH)/audio/audio_policy.conf:system/etc/audio_policy.conf \
-        $(LOCAL_PATH)/audio/nvaudio_conf.xml:system/etc/nvaudio_conf.xml
-        
+        $(LOCAL_PATH)/audio/nvaudio_conf.xml:system/etc/nvaudio_conf.xml \
+        $(LOCAL_PATH)/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/tablet_core_hardware.xml:system/etc/permissions/tablet_core_hardware.xml \
