@@ -165,6 +165,10 @@ on boot
     chown system system /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor
     chmod 0664 /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor
 
+# Misc permissions
+	chown system system /sys/devices/system/cpu/cpufreq/interactive/boost_factor
+	chmod 0664 /sys/devices/system/cpu/cpufreq/interactive/boost_factor
+
 # usb detect
     mkdir /dev/bus 0755 root root
     mkdir /dev/bus/usb 0755 root root
