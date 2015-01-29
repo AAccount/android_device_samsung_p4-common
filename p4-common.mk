@@ -117,6 +117,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
         libinvensense_mpl
 
+PRODUCT_PACKAGES += \
+    hwcomposer.tegra
+
 # Omni packages
 PRODUCT_PACKAGES += \
         OmniTorch \

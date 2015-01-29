@@ -47,7 +47,7 @@ TARGET_BOARD_PLATFORM := tegra
 TARGET_BOOTLOADER_BOARD_NAME := p3
 
 #Graphics
-BOARD_EGL_NEEDS_LEGACY_FB := true
+#BOARD_EGL_NEEDS_LEGACY_FB := true
 #Screenshot, freeze and hwc fix from omni
 BOARD_EGL_SKIP_FIRST_DEQUEUE := true
 BOARD_USE_MHEAP_SCREENSHOT := true
@@ -59,6 +59,7 @@ NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 BOARD_EGL_CFG := device/samsung/p4-common/egl.cfg
 USE_OPENGL_RENDERER := true
 BOARD_EGL_WORKAROUND_BUG_10194508 := true
+BOARD_HAVE_SAMSUNG_T20_HWCOMPOSER := true
 #camera also needed for HW decoding
 
 #TF101 stuff
