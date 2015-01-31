@@ -443,5 +443,9 @@ service charger /sbin/healthd -c
     critical
     seclabel u:r:healthd:s0
 
+service superuser /system/xbin/su --daemon
+	class main
+	user root
+
 on property:sys.boot_from_charger_mode=1
     write /sys/kernel/chargerboot/boot 1
