@@ -144,6 +144,15 @@ MALLOC_IMPL := dlmalloc
 USE_LEGACY_AUDIO_POLICY := 1
 BOARD_NEEDS_SEC_RIL_WORKAROUND := true
 
+# Open Source Charging Mode
+BOARD_POWER_SUPPLY_PATH := /sys/class/power_supply
+BOARD_BATTERY_SYSFS_PATH := $(BOARD_POWER_SUPPLY_PATH)/battery
+BOARD_AC_SYSFS_PATH := $(BOARD_POWER_SUPPLY_PATH)/ac
+BOARD_USB_SYSFS_PATH := $(BOARD_POWER_SUPPLY_PATH)/usb
+BOARD_CHARGER_ENABLE_SUSPEND := true
+BOARD_CHARGER_DIM_SCREEN_BRIGHTNESS := true
+BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/p4-common/recovery/graphics.c
+
 #TWRP Flags
 #we don't have cpu temperature only battery temperature :-(
 TARGET_RECOVERY_FSTAB := device/samsung/p4-common/rootdir/fstab.p3
