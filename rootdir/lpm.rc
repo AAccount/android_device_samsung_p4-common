@@ -66,11 +66,6 @@ on property:persist.service.adb.enable=1
 on property:persist.service.adb.enable=0
     stop adbd
 
-service playlpm /system/bin/playlpm
-    class main
-    user root
-
-service lpmkey /system/bin/lpmkey
-    class main
-    user root
+service battery_charger /aries_charger
+	user root
 
