@@ -153,6 +153,14 @@ on boot
     chown system radio /sys/class/host_notify/usb_otg/booster
     chmod 0664 /sys/class/host_notify/usb_otg/booster
 
+# Omni gears cpu maximum freq and scaling governor
+	#core 1
+    chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+	#core 2
+    chown system system /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq
+    chmod 0664 /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq
+
 # Omni gears cpu minimum freq and scaling governor
 	#core 1
     chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
@@ -168,6 +176,8 @@ on boot
 # Misc permissions
 	chown system system /sys/devices/system/cpu/cpufreq/interactive/boost_factor
 	chmod 0664 /sys/devices/system/cpu/cpufreq/interactive/boost_factor
+	chown system system /sys/module/cpu_tegra/parameters/cpu_user_cap
+	chmod 0664 /sys/module/cpu_tegra/parameters/cpu_user_cap
 
 # usb detect
     mkdir /dev/bus 0755 root root
