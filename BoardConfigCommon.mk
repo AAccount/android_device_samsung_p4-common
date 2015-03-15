@@ -149,7 +149,8 @@ BOARD_CHARGER_DIM_SCREEN_BRIGHTNESS := true
 BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/p4-common/recovery/graphics.c
 
 # Enable dex-preoptimization to speed up first boot sequence
-WITH_DEXPREOPT := true
+#WITH_DEXPREOPT := true
+#unfortunately odex rom + minimal gapps = 3.5mb free on /system
 
 #TWRP Flags
 #we don't have cpu temperature only battery temperature :-(
