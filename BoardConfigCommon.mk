@@ -19,7 +19,6 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR ?= device/samsung/p4-common/bluetoot
 # This variable is set first, so it can be overridden
 # by BoardConfigVendor.mk
 BOARD_USES_GENERIC_AUDIO := false
-#USE_CAMERA_STUB := false
 COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS #flash compatibility
 PRODUCT_PREBUILT_WEBVIEWCHROMIUM := yes
 
@@ -148,6 +147,9 @@ BOARD_USB_SYSFS_PATH := $(BOARD_POWER_SUPPLY_PATH)/usb
 BOARD_CHARGER_ENABLE_SUSPEND := true
 BOARD_CHARGER_DIM_SCREEN_BRIGHTNESS := true
 BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/p4-common/recovery/graphics.c
+
+# Enable dex-preoptimization to speed up first boot sequence
+WITH_DEXPREOPT := true
 
 #TWRP Flags
 #we don't have cpu temperature only battery temperature :-(
