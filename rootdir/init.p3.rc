@@ -353,6 +353,9 @@ service wpa_supplicant /system/bin/wpa_supplicant \
     disabled
     oneshot
 
+#To make sure it doesn't end up rws--x---
+	chmod 0755 /system/xbin/su
+
 service p2p_supplicant /system/bin/wpa_supplicant \
         -iwlan0 -Dnl80211 -c/data/misc/wifi/wpa_supplicant.conf -N \
         -ip2p0 -Dnl80211 -c/data/misc/wifi/p2p_supplicant.conf \
