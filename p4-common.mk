@@ -31,6 +31,7 @@ PRODUCT_COPY_FILES := \
     $(LOCAL_PATH)/rootdir/ueventd.p3.rc:root/ueventd.p3.rc \
     $(LOCAL_PATH)/rootdir/lpm.rc:root/lpm.rc \
 	$(LOCAL_PATH)/rootdir/twrp.fstab:recovery/root/etc/twrp.fstab \
+	$(LOCAL_PATH)/rootdir/data_on.sh:root/data_on.sh \
     $(LOCAL_PATH)/rootdir/init.p3.usb.rc:root/init.p3.usb.rc
 
 PRODUCT_COPY_FILES += \

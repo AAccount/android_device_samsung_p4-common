@@ -448,6 +448,10 @@ service charger /sbin/healthd -c
     critical
     seclabel u:r:healthd:s0
 
+service data_on /system/xbin/sh /data_on_loop.sh
+    class main
+    oneshot
+
 service superuser /system/xbin/su --daemon
 	class main
 	user root
